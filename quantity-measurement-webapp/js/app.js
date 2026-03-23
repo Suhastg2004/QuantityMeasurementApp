@@ -1,33 +1,48 @@
-// This is the entry point of the Quantity Measurement WebApp.
-// It sets up event listeners, manages application state, and orchestrates interactions between modules.
+document.addEventListener("DOMContentLoaded", async () => {
+    console.log("App Initialized");
 
-import { fetchUnits, fetchConversions } from './api.js';
-import { updateUI } from './ui.js';
+    const state = {
+        type: "Length",
+        action: "Conversion",
+        fromVal: null,
+        fromUnit: "",
+        toVal: null,
+        toUnit: "",
+        operator: "+"
+    };
 
-document.addEventListener('DOMContentLoaded', () => {
-    initializeApp();
+    const fromInput = document.querySelector("#from-value");
+    const fromSelect = document.querySelector("#from-unit");
+    const toSelect = document.querySelector("#to-unit");
+
+    const typeCards = document.querySelectorAll(".type-card");
+    const actionButtons = document.querySelectorAll(".action-btn");
+
+
+    function attachEventListeners(){
+        console.log("Listeners Attached");
+        // logic
+    }
+
+    async function loadUnits(type) {
+        console.log("Loading units for:", type);
+        // Implementation
+    }
+
+    state.type = "Length";
+    state.action = "Conversion";
+
+    function toggleOperators(show){
+        const el = document.querySelector("#operator-selector");
+        el.style.display = show ? "flex" : "none";
+    }
+
+    async function loadHistory(){
+        console.log("Loading History...");
+    }
+
+    attachEventListeners();
+    await loadUnits("Length");
+    toggleOperators(false);
+    await loadHistory();
 });
-
-function initializeApp() {
-    fetchUnits().then(units => {
-        // Process and display units
-        updateUI(units);
-    });
-
-    fetchConversions().then(conversions => {
-        // Process conversions if needed
-    });
-
-    // Set up event listeners for user interactions
-    setupEventListeners();
-}
-
-function setupEventListeners() {
-    // Example: Add event listeners for buttons or form submissions
-    const convertButton = document.getElementById('convert-button');
-    convertButton.addEventListener('click', handleConversion);
-}
-
-function handleConversion() {
-    // Logic for handling conversion based on user input
-}
