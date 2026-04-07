@@ -1,0 +1,70 @@
+.app-shell {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 24px;
+}
+
+.nav-links {
+  display: flex;
+  gap: 10px;
+  margin-bottom: 20px;
+  flex-wrap: wrap;
+}
+
+.nav-links a {
+  padding: 8px 12px;
+  border: 1px solid #cfcfcf;
+  border-radius: 6px;
+  text-decoration: none;
+  color: #222;
+}
+
+.nav-links a.active {
+  background: #e6f0ff;
+  border-color: #6d9dff;
+}
+
+.card {
+  border: 1px solid #d9d9d9;
+  border-radius: 8px;
+  padding: 16px;
+}
+
+.form-grid {
+  display: grid;
+  gap: 10px;
+  grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+  margin-bottom: 12px;
+}
+
+.form-grid input,
+.form-grid select,
+.history-row select {
+  padding: 8px;
+}
+
+.button-row,
+.history-row {
+  display: flex;
+  gap: 8px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.button-row button,
+.history-row button {
+  padding: 8px 12px;
+  cursor: pointer;
+}
+
+.result-box,
+.history-box {
+  border: 1px solid #ececec;
+  border-radius: 6px;
+  padding: 10px;
+  margin-bottom: 10px;
+}
+
+.error {
+  color: #b30000;
+}
