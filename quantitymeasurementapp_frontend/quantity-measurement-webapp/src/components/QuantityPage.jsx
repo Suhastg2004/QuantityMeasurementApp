@@ -9,6 +9,7 @@ function QuantityPage({ title, measurementType, units }) {
     thatValue: "",
     thatUnit: units[0]
   });
+
   const [result, setResult] = useState(null);
   const [error, setError] = useState("");
   const [history, setHistory] = useState([]);
