@@ -231,6 +231,12 @@ public class QuantityMeasurementController {
     public ResponseEntity<List<QuantityMeasurementDTO>> getErroredOperations() {
         return ResponseEntity.ok(service.getErrorHistory());
     }
+	@GetMapping("/test-build")
+    public ResponseEntity<String> testJenkinsBuild() {
+        // You can optionally call an existing service method here if you want to test the wiring, 
+        // but returning a simple string is enough to prove the new build deployed.
+        return new ResponseEntity<>("Jenkins build deployed successfully!", HttpStatus.OK);
+    }
     
     @ExceptionHandler(IllegalArgumentException.class)
     @ResponseStatus(org.springframework.http.HttpStatus.BAD_REQUEST)
