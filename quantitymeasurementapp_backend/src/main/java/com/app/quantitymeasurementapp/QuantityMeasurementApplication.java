@@ -21,7 +21,9 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class QuantityMeasurementApplication {
 
     public static void main(String[] args) {
-        SpringApplication.run(QuantityMeasurementApplication.class, args);
+        
+	//Added this comment to check jenkins build 
+	SpringApplication.run(QuantityMeasurementApplication.class, args);
         System.out.println("Quantity Measurement Application is running...");
     }
 }
