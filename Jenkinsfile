@@ -40,7 +40,7 @@ stages {
  
             withCredentials([[
                 $class: 'AmazonWebServicesCredentialsBinding',
-                credentialsId: 'aws-ecr-creds'
+                credentialsId: 'aws-ecr-credential'
             ]]) {
  
                 sh '''
