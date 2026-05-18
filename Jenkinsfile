@@ -2,11 +2,13 @@ pipeline {
 agent any
  
 environment {
- 
+
     AWS_ACCOUNT_ID = '043784343117'
     AWS_REGION = 'us-east-2'
-    IMAGE_NAME = '043784343117.dkr.ecr.us-east-2.amazonaws.com/quantitymeasurement-backend:v2'
- 
+
+    IMAGE_NAME = 'quantitymeasurement-backend'
+    IMAGE_TAG = 'v2'
+
     ECR_URI = "${AWS_ACCOUNT_ID}.dkr.ecr.${AWS_REGION}.amazonaws.com/${IMAGE_NAME}"
 }
  
