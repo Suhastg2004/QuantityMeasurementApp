@@ -74,7 +74,7 @@ pipeline {
 
                 sh """
                 ssh -o StrictHostKeyChecking=no \
-                -i /var/lib/jenkins/.ssh/quantity-key.pem \
+                -i /var/lib/jenkins/.ssh/mykey.pem \
                 ${EC2_USER}@${EC2_HOST} << EOF
 
                 aws ecr get-login-password --region ${AWS_REGION} | \
